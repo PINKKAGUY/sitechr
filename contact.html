@@ -1,0 +1,228 @@
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.dropdown-menu');
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Transmuteuse - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeCt4gqAAAAAP9--Lg7jdi2MIlEtLojY2NpEDiK"></script>
+    
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const form = document.getElementById('luxuryForm');
+          const submitButton = form.querySelector('button[type="submit"]');
+    
+          form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+    
+            // Disable the button to prevent multiple submissions
+            submitButton.disabled = true;
+    
+            // Execute reCAPTCHA
+            grecaptcha.enterprise.ready(async () => {
+              try {
+                const token = await grecaptcha.enterprise.execute('6LeCt4gqAAAAAP9--Lg7jdi2MIlEtLojY2NpEDiK', { action: 'submit' });
+    
+                if (token) {
+                  // Append the token to the form
+                  const tokenInput = document.createElement('input');
+                  tokenInput.type = 'hidden';
+                  tokenInput.name = 'g-recaptcha-response';
+                  tokenInput.value = token;
+                  form.appendChild(tokenInput);
+    
+                  // Submit the form
+                  form.submit();
+                } else {
+                  alert('reCAPTCHA verification failed. Please try again.');
+                  submitButton.disabled = false;
+                }
+              } catch (error) {
+                console.error('reCAPTCHA error:', error);
+                alert('An error occurred while verifying reCAPTCHA. Please try again.');
+                submitButton.disabled = false;
+              }
+            });
+          });
+        });
+      </script>
+        <script>
+            function onSubmit(token) {
+              const form = document.getElementById("luxuryForm");
+              // Validate the form fields before submission
+              if (form.checkValidity()) {
+                form.submit();
+              } else {
+                alert("Veuillez remplir correctement tous les champs avant de soumettre.");
+              }
+            }
+          </script>
+    <header>
+        <h2 class="header-title"> <b> LA TRANSMUTEUSE</b> </h2>      
+        <!-- Icône de menu (visible sur mobile uniquement) -->
+        <span class="menu-icon" onclick="toggleMenu()">☰</span>
+        
+        <!-- Menu principal (visible sur les écrans larges) -->
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="creative-process.html">CREATIVE PROCESS</a></li>
+                <li><a href="art-stories.html">ART & STORIES</a></li>
+                <li><a href="benefits.html">BENEFITS</a></li>
+                <li><a href="why-me.html">WHY ME</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Menu déroulant (visible sur les écrans petits) -->
+        <nav class="dropdown-menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="creative-process.html">CREATIVE PROCESS</a></li>
+                <li><a href="art-stories.html">ART & STORIES</a></li>
+                <li><a href="benefits.html">BENEFITS</a></li>
+                <li><a href="why-me.html">WHY ME</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact1">
+        <div class="overlay">
+            
+        </div>
+    </section>
+    <section class="intro">
+        <h3>Start Your Journey of Transformation</h3>
+        <p>Thank you for exploring the world of Energy Infused Paintings. If you feel called to bring
+            one of these transformative pieces into your life, I would love to hear from you. Let’s begin
+            a conversation about your unique energetic needs and how I can create a personalized
+            painting that supports your spiritual and personal growth.</p>
+    </section>
+    <section class="intro">
+        <h3>Get in Touch</h3>
+        <p>Please fill out the form below, and I’ll get back to you shortly to schedule a preliminary
+            talk.</p><p>During this conversation, we’ll discuss your intentions, energy, and vision for your
+                personalized artwork.</p>
+    </section>
+    <section class="contact">
+        
+        <form class="luxury-form" id="luxuryForm" action="https://formsubmit.co/contact@latransmuteuse.vision" method="post">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="First name" required maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last name" required maxlength="50">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone number" required pattern="[0-9]{10}" title="Veuillez entrer un numéro à 10 chiffres">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Message" rows="5" required maxlength="1000"></textarea>
+            </div>
+
+            <!-- Bouton de soumission simple -->
+            <button type="submit" class="luxury-button">Submit</button>
+        </form>
+            
+        
+    </section>
+    <section class="intro">
+        <h3>Get in Touch</h3>
+        <p>Get in touch with me today for a preliminary talk and book your personalized creation.</p>
+    </section>
+    <section class="intro">
+        <h3>Prefer Another Way to Reach Me?</h3>
+        <p>If you’d like to connect with me directly, here are a few more ways to get in touch:</p>
+    </section>
+    <!DOCTYPE html>
+    <html lang="en">
+    <div class="contact-container">
+        <div class="contact-section">
+            <h1>Contact La Transmuteuse</h1>
+            <p>mail : <a href="mailto:contact@latransmuteuse.vision">contact@latransmuteuse.vision</a></p>
+            <p>phone : <a href="tel:+4915115629281">+49-15115629281</a></p>
+            <p>Linkedin : <a href="https://www.linkedin.com/in/la-transmuteuse-65176433a/">La Transmuteuse</a></p>
+        </div>
+    </div>
+    <section class="intro">
+        <p>Ready to transform your life through the power of energetic art? Let’s co-create a
+            masterpiece that resonates with your soul and supports your journey.</p>
+            <div class="intro-button-container">
+                <button class="intro-button" onclick="location.href='art-stories.html';">Book Your Personalized Painting Now</button>
+            </div>
+    </section>
+    
+    </body>
+    </html>
+    
+    <footer>
+        <div class="footercontainer">
+
+            <!-- Navigation et note -->
+            <div class="footercenter">
+                <h2 class="footer-title"> 
+                    <b> LA TRANSMUTEUSE</b>
+        <!-- Icône du menu -->
+        <!-- Bouton Menu spécifique au footer -->
+
+            <!-- Navigation -->
+            <nav class="footernav">
+                <ul class="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="creative-process.html">CREATIVE PROCESS</a></li>
+                    <li><a href="art-stories.html">ART & STORIES</a></li>
+                    <li><a href="benefits.html">BENEFITS</a></li>
+                    <li><a href="why-me.html">WHY ME</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="Legal Notice.html">Legal Notice</a></li>
+                    <li><a href="Crédit.html">Credit</a></li>
+                </ul>
+                </nav>
+                <div class="footernote"> 
+                <b>Thank you for considering an Energy Infused Painting. I look forward to co-creating a
+                                unique piece of art that transforms and uplifts your life.</b>
+                                <!-- Informations de contact -->
+            <div class="footercontact">
+                <div class="contact-row">
+                    <p>mail: <a href="mailto:your-email@example.com">contact@latransmuteuse.vision</a></p>
+                    <p>Phone: <a href="tel:+XXXXXXXXXXX">+49 151 15629182</a></p>
+                    <p>Linkedin: <a href="https://www.linkedin.com/in/la-transmuteuse-65176433a/">La transmuteuse</a></p>
+                    
+                </div>
+                <div class="footer-copyright">
+                    MMXXIV © LaTransmuteuse.Vision & FACELAND.COM & BUBBLE MONTAGE
+                </div>
+
+    </footer>
+</body>
+</html>   
+   

@@ -1,0 +1,150 @@
+/* art-stories.css */
+
+/* Style général */
+body {
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    background-color: #f4f4f9;
+}
+
+/* En-tête et pied de page */
+header, footer {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Titre principal et sous-titres */
+h1, h2 {
+    color: #222222;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 2em;
+}
+
+/* Galerie */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gallery-item p {
+    font-size: 0.9em;
+    color: #555555;
+    margin-top: 0.5em;
+}
+
+/* Témoignages */
+.testimonials p {
+    font-style: italic;
+    color: #444444;
+    margin: 1em 0;
+    padding-left: 1em;
+    border-left: 3px solid #666666;
+}
+
+/* Boutons d'appel à l'action */
+.cta-button {
+    padding: 10px 20px;
+    background-color: #444444;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #666666;
+}
+
+/* Liens dans le pied de page */
+footer a {
+    color: #cccccc;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Menu principal */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 0.5em;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #cccccc;
+}
+
+/* Media Queries pour responsivité */
+@media (max-width: 768px) {
+    /* Adapter le style du conteneur */
+    .container {
+        padding: 10px;
+    }
+
+    /* Adapter les titres */
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    /* Réduire l'espace entre les sections */
+    .section {
+        margin-bottom: 1.5em;
+    }
+}

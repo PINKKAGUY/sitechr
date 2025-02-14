@@ -1,0 +1,157 @@
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.dropdown-menu');
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Transmuteuse - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2 class="header-title"> <b> LA TRANSMUTEUSE</b> </h2>      
+        <!-- Icône de menu (visible sur mobile uniquement) -->
+        <span class="menu-icon" onclick="toggleMenu()">☰</span>
+        
+        <!-- Menu principal (visible sur les écrans larges) -->
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="creative-process.html">CREATIVE PROCESS</a></li>
+                <li><a href="art-stories.html">ART & STORIES</a></li>
+                <li><a href="benefits.html">BENEFITS</a></li>
+                <li><a href="why-me.html">WHY ME</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Menu déroulant (visible sur les écrans petits) -->
+        <nav class="dropdown-menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="creative-process.html">CREATIVE PROCESS</a></li>
+                <li><a href="art-stories.html">ART & STORIES</a></li>
+                <li><a href="benefits.html">BENEFITS</a></li>
+                <li><a href="why-me.html">WHY ME</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="mp4/20241124_LaTransmuteuseMovie_666_small_web.mp4" type="video/mp4">
+            <!-- Ajoutez d'autres formats si nécessaire -->
+        </video>
+        <div class="overlay1">
+            <div class="button" onclick="window.location.href='film.html'">watch full film</div>
+        </div>
+    </section>
+
+    <section class="intro">
+        <h3>Unleash Your Potential Through Energetic Art</h3>
+        <p>Energy transmutation through an Energy Infused Painting is a powerful tool for releasing
+            what holds us back, restoring inner and outer harmony, and evolving towards a more
+            connected version of ourselves.</p>
+        <div class="intro-button-container">
+            <button class="intro-button" onclick="location.href='art-stories.html';">EXPLORE MY ART</button>
+        </div>
+    </section>
+
+    <section class="intro">
+        <h3>Welcome to the Universe of La Transmuteuse</h3>
+        <p>Dive into a world where art meets energy. As La Transmuteuse, I channel transformative
+            energies into unique Energy Infused Paintings, each tailored to guide your spiritual and
+            personal growth. These are not just artworks—they are vibrational tools designed to
+            elevate your energy and align your space.</p>
+    </section>
+    <section class="highlights">
+        <!-- Premier élément -->
+        <div class="highlight-box">
+            <div class="highlight-item" style="background-image: url('img/Image20241125123436.jpg');">
+                <div class="highlight-content">
+                    <div class="button" onclick="window.location.href='about.html'">DISCOVER MY STORY</div>
+                </div>
+            </div>
+            <h2>Who Is La Transmuteuse?</h2>
+            <p>I am La Transmuteuse, a spiritual artist and energetic practitioner. My unique gift lies in transforming energies through art, creating pieces that resonate deeply with the soul. With every movement, I infuse my paintings with high-frequency vibrations, turning them into powerful tools for personal and spiritual growth.</p>
+        </div>
+    
+        <!-- Deuxième élément -->
+        <div class="highlight-box">
+            <div class="highlight-item" style="background-image: url('img/Image20241125123449.jpg');">
+                <div class="highlight-content">
+                    <div class="button" onclick="window.location.href='creative-process.html'">LEARN MORE ABOUT ENERGETIC ART</div>
+                </div>
+            </div>
+            <h2>What Makes Energy Infused Paintings Unique?</h2>
+            <p>Each Energy Infused Painting is a catalyst for transformation. Far beyond simple decoration, these artworks are vibrational tools that promote mindfulness, self-awareness, and spiritual evolution. Infused with specific intentions, they interact with your energy field, helping to release blockages, restore balance, and raise your vibration.</p>
+        </div>
+    
+        <!-- Troisième élément -->
+        <div class="highlight-box">
+            <div class="highlight-item" style="background-image: url('img/3_à_droite_LaTransmuteuse_D19B8802_Papillion_carré_cut_1080x1080px_q6_OK!.jpg');">
+                <div class="highlight-content">
+                    <div class="button" onclick="window.location.href='benefits.html'">EXPLORE THE BENEFITS</div>
+                </div>
+            </div>
+            <h2>How Can Energy Infused Paintings Transform Your Life?</h2>
+            <p>Whether you seek personal healing, spiritual alignment, or environmental transformation, Energy Infused Paintings are designed to meet your unique needs. These artworks serve as a bridge between your human and soul identities, supporting you on your journey towards greater harmony and self-discovery.</p>
+        </div>
+    </section>
+    <footer>
+        <h2 class="footer-title"> 
+            <b> LA TRANSMUTEUSE</b>
+        <div class="footercontainer">
+
+            <!-- Navigation et note -->
+            <div class="footercenter">
+
+        <!-- Icône du menu -->
+        <!-- Bouton Menu spécifique au footer -->
+
+            <!-- Navigation -->
+            <nav class="footernav">
+                <ul class="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="creative-process.html">CREATIVE PROCESS</a></li>
+                    <li><a href="art-stories.html">ART & STORIES</a></li>
+                    <li><a href="benefits.html">BENEFITS</a></li>
+                    <li><a href="why-me.html">WHY ME</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="Legal Notice.html">Legal Notice</a></li>
+                    <li><a href="Crédit.html">Credits</a></li>
+                </ul>
+                </nav>
+                <div class="footernote"> 
+                <b>Thank you for considering an Energy Infused Painting. I look forward to co-creating a
+                                unique piece of art that transforms and uplifts your life.</b>
+                                <!-- Informations de contact -->
+            <div class="footercontact">
+                <div class="contact-row">
+                    <p>mail: <a href="mailto:your-email@example.com">contact@latransmuteuse.vision</a></p>
+                    <p>Phone: <a href="tel:+XXXXXXXXXXX">+49 151 15629182</a></p>
+                    <p>Linkedin: <a href="https://www.linkedin.com/in/la-transmuteuse-65176433a/">La transmuteuse</a></p>
+                    
+                </div>
+            <div class="footer-copyright">
+                MMXXIV © LaTransmuteuse.Vision & FACELAND.COM & BUBBLE MONTAGE
+            </div>
+    </footer>
+    
+    
+
+</html>

@@ -1,0 +1,12 @@
+# Forcer la redirection vers HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Rediriger tous les visiteurs vers la page d'attente
+RewriteEngine On
+RewriteRule ^$ attente.html [L]
+
+<Files "config.php">
+    Require all denied
+</Files>
